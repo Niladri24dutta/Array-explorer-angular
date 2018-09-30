@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {locales} from '../languages/locale'
+import {locales} from '../../languages/locale'
 import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-switchlocale',

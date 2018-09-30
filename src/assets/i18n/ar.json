@@ -6,5 +6,8 @@
     },
     "selectlanguage":{
         "Title":"لغة"
+    },
+    "Usage":{
+        "Output":"نتيجة"
     }
 }   

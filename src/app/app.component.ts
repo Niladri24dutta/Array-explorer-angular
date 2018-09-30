@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'app';
+  showUsage:boolean = true;
   
   constructor(private translate: TranslateService) {
     //let language =  window.navigator.language; 
