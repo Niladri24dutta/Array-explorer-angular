@@ -1,0 +1,16 @@
+select {
+    margin-top: 8px;
+  }
+
+  .localization-dropdown {
+    position: absolute;
+    right: 8%;
+    top: 35px;
+    text-align: right;  
+  }
+
+  .customLanguage{
+      width: 200px;
+      text-align: left;
+      font-size: large;
+  }
