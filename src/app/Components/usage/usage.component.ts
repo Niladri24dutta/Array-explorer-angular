@@ -1,7 +1,7 @@
 import { Component, OnInit, Input,OnDestroy } from '@angular/core';
 import { DomSanitizer,SafeHtml } from '@angular/platform-browser'
 import { Subscription } from 'rxjs';
-import { MessageService } from '../../Services/message.service';
+import { MessageService } from '../../services/message.service';
 
 @Component({
   selector: 'app-usage',
