@@ -1,0 +1,10 @@
+{
+    "app":{
+        "Title": "JavaScript Array Explorer (usando Angular)",
+        "Subtitle": "Encuentre el método de matriz que necesita sin tener que buscar entre los documentos",
+        "Usage":"Uso"
+    },
+    "selectlanguage":{
+        "Title":"Idioma"
+    }
+}

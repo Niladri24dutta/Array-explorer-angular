@@ -1,0 +1,10 @@
+{
+    "app":{
+        "Title": "JavaScript Array Explorer (unter Verwendung von Angular)",
+        "Subtitle": "Finden Sie die benötigte Array-Methode, ohne die Dokumente durchsuchen zu müssen",
+        "Usage":"Verwendung"
+    },
+    "selectlanguage":{
+        "Title":"Sprache"
+    }
+}

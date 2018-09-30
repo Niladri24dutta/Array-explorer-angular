@@ -1,0 +1,10 @@
+{
+    "app":{
+        "Title": "JavaScript Array Explorer(using Angular)",
+        "Subtitle": "Find the array method you need without digging through the docs",
+        "Usage":"Usage"
+    },
+    "selectlanguage":{
+        "Title":"Language"
+    }
+}
