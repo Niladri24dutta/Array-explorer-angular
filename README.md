@@ -1,4 +1,6 @@
-# AngularArrayExplorer
+# Array Explorer using Angular 5
+
+(inspired by [Array explorer](https://github.com/sdras/array-explorer/) project of [@sdras](https://github.com/sdras))
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
