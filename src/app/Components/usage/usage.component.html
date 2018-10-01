@@ -1,0 +1,23 @@
+<aside>
+  <div class="usage-code usage1">
+    <p>
+      <span>let arr = [5, 1, 8];</span><br>
+      <span *ngIf="selectedUsage"
+        class="exampleoutput"
+        [innerHTML]="example">
+      </span>
+    </p>
+  </div>
+  <div *ngIf="selectedUsage" class="usage2">
+    <h3 style="margin-top: 50px">{{ 'Usage.Output' | translate }}</h3>
+    <div class="usage-code">
+      <p>
+        <span
+          class="exampleoutput2"
+          ref="ex2"
+          [innerHTML]="output">
+        </span>
+      </p>
+    </div><!--usage-code-->
+  </div>
+</aside>

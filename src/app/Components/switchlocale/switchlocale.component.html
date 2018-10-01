@@ -1,8 +1,8 @@
 <div class="localization-dropdown">
   <a href="https://github.com/Niladri24dutta/Object-explorer-angular/"><em>Angular Object Explorer</em></a>
   <br>
-  Language: 
-  <select [(ngModel)]="selectedLanguage" class="customLanguage">
+  {{ 'selectlanguage.Title' | translate }}: 
+  <select [(ngModel)]="selectedLanguage" class="customLanguage" (change)="changeDefaultLanguage($event)">
     <option *ngFor="let locale of languages" [value]="locale.short">{{locale.long}}</option>
   </select>
 </div>

@@ -1,0 +1,27 @@
+.usage-code {
+    padding: 0 20px;
+    margin: 20px 0;
+    background: #333;
+    border: 2px solid #f55e41;
+    transition: 0.2s all ease;
+    display: block;
+    border-radius: 5px;
+    line-height: 1.8em;
+    font-family: monospace;
+  }
+  .usage1 {
+    color: #aeded4;
+  }
+  .usage2 span {
+    color: #ecc2a4;
+  }
+  .exampleoutput,
+  .exampleoutput2 {
+    display: inline-block;
+    opacity: 0;
+  }
+  .exampleoutput div,
+  .exampleoutput2 div {
+    opacity: 0;
+    transform: scale(0);
+  }
