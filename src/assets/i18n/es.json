@@ -9,5 +9,17 @@
     },
     "Usage":{
         "Output":"Resultado"
+    },
+    "primaryMethod":{
+        "firstMethod": "Tengo un array, me gustaría",
+        "primaryOptions":{
+            "add" :"agregar elementos u otros arrays",
+            "remove" : "eliminar elementos",
+            "find" : "buscar elementos",
+            "iterate": "pasar entre elementos",
+            "string": "devolver una cadena de caracteres",
+            "ordering" : "ordenar un array",
+            "others": "cualquier otra cosa"
+        }
     }
 }
