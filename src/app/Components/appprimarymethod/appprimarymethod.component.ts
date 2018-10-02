@@ -1,19 +1,26 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs'
+import {MessageService} from '../../services/message.service'
 import {defaultOptions} from '../../languages/defaultconfig'
+
 @Component({
   selector: 'app-appprimarymethod',
   templateUrl: './appprimarymethod.component.html',
   styleUrls: ['./appprimarymethod.component.css']
 })
-export class AppprimarymethodComponent implements OnInit {
+export class AppprimarymethodComponent implements  OnDestroy{
 
   options:any[] = [];
   @Input() selectedFilter:string = '';
-  constructor() { 
+  message: any;
+  subscription: Subscription;
+  
+  constructor(private service:MessageService) { 
     this.options = defaultOptions.primaryOptions;
   }
 
-  ngOnInit() {
-  }
-
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.subscription.unsubscribe();
+   }
 }

@@ -30,6 +30,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     TeximateModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
