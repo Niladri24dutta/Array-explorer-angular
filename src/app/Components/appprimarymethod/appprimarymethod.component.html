@@ -6,23 +6,32 @@
         {{ 'primaryMethod.primaryOptions.'+option.name | translate }}
       </option>
     </select>
-    <ng-container *ngIf="selectedFilter === 'add' ;else second">
+    <ng-container *ngIf="selectedFilter === 'add' ;else remove">
       <div>
-        <!-- <method-choice :options="adding" methodType="add"/> --> 
+        <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
       </div>
     </ng-container>
-    <ng-template #second>
-      <ng-container *ngIf="selectedFilter === 'remove'; else third">
+    <ng-template #remove>
+      <ng-container *ngIf="selectedFilter === 'remove'; else iterateby">
         <div>
-          <!-- <method-choice :options="removing" methodType="remove"/> -->
+          <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
         </div>
       </ng-container>
     </ng-template>
-    <ng-template #third>
-      <div>
-        <!-- <method-choice :options="iterate" methodType="iterate by"/> --> 
-      </div>
+    <ng-template #iterateby>
+      <ng-container *ngIf="selectedFilter === 'iterate'; else findelm">
+        <div>
+          <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+        </div>
+      </ng-container>   
     </ng-template>
+    <ng-template #findelm>
+        <ng-container *ngIf="selectedFilter === 'find'">
+          <div>
+            <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+          </div>
+        </ng-container>   
+      </ng-template>
     <!-- <div if="selectedFilter === options[0]">
       <method-choice :options="adding" methodType="add"/>
     </div>

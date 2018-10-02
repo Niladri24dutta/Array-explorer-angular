@@ -10,7 +10,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { UsageComponent } from './components/usage/usage.component';
 import {MessageService} from './services/message.service';
-import { AppprimarymethodComponent } from './components/appprimarymethod/appprimarymethod.component'
+import { AppprimarymethodComponent } from './components/appprimarymethod/appprimarymethod.component';
+import { SelectedmethodComponent } from './components/selectedmethod/selectedmethod.component'
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,7 +24,8 @@ export function createTranslateLoader(http: HttpClient) {
     GithubRepoComponent,
     SwitchlocaleComponent,
     UsageComponent,
-    AppprimarymethodComponent
+    AppprimarymethodComponent,
+    SelectedmethodComponent
   ],
   imports: [
     BrowserModule,
