@@ -2,13 +2,6 @@ export const defaultOptions = {
     firstMethod: 'I have an array, I would like to',
     findMethod: "I'm trying to find",
     methodOptions: 'I need to',
-    methodTypes: {
-      add: 'add',
-      remove: 'remove',
-      find: 'find',
-      iterateby: 'iterate by',
-      string: 'string'
-    },
     singleItem: 'one item',
     manyItems: 'one or many items',
     primaryOptions: [
@@ -20,4 +13,12 @@ export const defaultOptions = {
       {name:'ordering',desc:'order an array'},
       {name: 'others',desc: 'something else'}
   ] 
+}
+
+export enum methodTypes {
+  add = 'add',
+  remove =  'remove',
+  find = 'find',
+  iterateby =  'iterate by',
+  string = 'string'
 }

@@ -10,8 +10,8 @@ export class MessageService {
         this.subject.next({ usage: selectedUsage , input :example,op:output});
     }
 
-    resetLocale(reset:boolean){
-        this.resetSubject.next({reset : true});
+    resetLocale(reset:string){
+        this.resetSubject.next({reset : reset});
     }
 
     clearMessage() {
@@ -27,6 +27,6 @@ export class MessageService {
     }
 
     clearResetValue(){
-        this.resetSubject.next({reset: false});
+        this.resetSubject.next();
     }
 }
