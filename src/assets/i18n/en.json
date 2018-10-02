@@ -9,5 +9,17 @@
     },
     "Usage":{
         "Output":"Output"
+    },
+    "primaryMethod":{
+        "firstMethod": "I have an array, I would like to",
+        "primaryOptions":{
+                "add" :"add items or other arrays",
+                "remove" : "remove items",
+                "find" : "find items",
+                "iterate": "walk over items",
+                "string": "return a string",
+                "ordering" : "order an array",
+                "others": "something else"
+        }
     }
 }
