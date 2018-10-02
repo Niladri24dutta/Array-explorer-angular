@@ -8,7 +8,7 @@ import {defaultOptions} from '../../languages/defaultconfig'
   templateUrl: './appprimarymethod.component.html',
   styleUrls: ['./appprimarymethod.component.css']
 })
-export class AppprimarymethodComponent implements  OnDestroy{
+export class AppprimarymethodComponent implements OnInit,OnDestroy{
 
   options:any[] = [];
   @Input() selectedFilter:string = '';
@@ -17,10 +17,18 @@ export class AppprimarymethodComponent implements  OnDestroy{
   
   constructor(private service:MessageService) { 
     this.options = defaultOptions.primaryOptions;
+    this.subscription = this.service.getResetValue().subscribe(message => { 
+      this.message = message;
+      this.selectedFilter = this.message.reset;
+     });
   }
 
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
     this.subscription.unsubscribe();
+   }
+
+   ngOnInit(){
+
    }
 }
