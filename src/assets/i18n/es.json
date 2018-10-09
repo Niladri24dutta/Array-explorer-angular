@@ -20,6 +20,11 @@
             "string": "devolver una cadena de caracteres",
             "ordering" : "ordenar un array",
             "others": "cualquier otra cosa"
+        },
+        "findMethod":"Estoy intentando encontrar",
+        "findMethodOptions":{
+            "single":"un elemento",
+            "many":"uno o mas elementos"
         }
     }
 }

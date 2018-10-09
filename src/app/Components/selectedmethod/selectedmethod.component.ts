@@ -7,7 +7,9 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class SelectedmethodComponent implements OnInit {
 
-  @Input() methodType:string = ''
+  @Input() methodType:string = '';
+  @Input() methodFindOption:string = '';
+  
   constructor() { }
 
   ngOnInit() {
