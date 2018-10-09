@@ -1,38 +1,84 @@
 <div>
-    <label for="firstmethod">{{ 'primaryMethod.firstMethod' | translate }}</label>
-    <select id="firstmethod" name="select" [(ngModel)]="selectedFilter" class="arrayOptions">
-      <option value="" disabled selected>...</option>
-      <option *ngFor="let option of options" [value]="option.name">
-        {{ 'primaryMethod.primaryOptions.'+option.name | translate }}
-      </option>
-    </select>
-    <ng-container *ngIf="selectedFilter === 'add' ;else remove">
+  <label for="firstmethod">{{ 'primaryMethod.firstMethod' | translate }}</label>
+  <select id="firstmethod" name="select" [(ngModel)]="selectedFilter" class="arrayOptions" (change)="resetOptions($event)">
+    <option value="" disabled selected>...</option>
+    <option *ngFor="let option of options" [value]="option.name">
+      {{ 'primaryMethod.primaryOptions.'+option.name | translate }}
+    </option>
+  </select>
+  <ng-container *ngIf="selectedFilter === 'add' ;else remove">
+    <div>
+      <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+    </div>
+  </ng-container>
+  <ng-template #remove>
+    <ng-container *ngIf="selectedFilter === 'remove'; else iterateby">
       <div>
         <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
       </div>
     </ng-container>
-    <ng-template #remove>
-      <ng-container *ngIf="selectedFilter === 'remove'; else iterateby">
-        <div>
-          <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
-        </div>
-      </ng-container>
-    </ng-template>
-    <ng-template #iterateby>
-      <ng-container *ngIf="selectedFilter === 'iterate'; else findelm">
-        <div>
-          <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
-        </div>
-      </ng-container>   
-    </ng-template>
-    <ng-template #findelm>
-        <ng-container *ngIf="selectedFilter === 'find'">
+  </ng-template>
+  <ng-template #iterateby>
+    <ng-container *ngIf="selectedFilter === 'iterate'; else findelm">
+      <div>
+        <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+      </div>
+    </ng-container>
+  </ng-template>
+  <ng-template #findelm>
+    <ng-container *ngIf="selectedFilter === 'find'; else stringdemo">
+      <div>
+        <!-- <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod> -->
+        <p>
+          <label for="findmethod">{{ 'primaryMethod.findMethod' | translate }}</label>
+          <select id="findMethod" name="selectfind" [(ngModel)]="selectedFind" class="arrayOptions">
+            <option value="" disabled selected>...</option>
+            <option value="single">{{ 'primaryMethod.findMethodOptions.single' | translate }}</option>
+            <option value="many">{{ 'primaryMethod.findMethodOptions.many' | translate }}</option>
+          </select>
+        </p>
+
+        <ng-container *ngIf="selectedFind === 'single'; else manytemp">
           <div>
-            <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+            <app-selectedmethod [methodFindOption]="selectedFind" [methodType]="selectedFilter"></app-selectedmethod>
           </div>
-        </ng-container>   
-    </ng-template>
-    <!-- <div if="selectedFilter === options[0]">
+        </ng-container>
+        <ng-template #manytemp>
+          <ng-container *ngIf="selectedFind === 'many'">
+            <div>
+              <app-selectedmethod [methodFindOption]="selectedFind" [methodType]="selectedFilter"></app-selectedmethod>
+            </div>
+          </ng-container>
+        </ng-template>
+
+        <!-- <div v-else-if="selectedFind === 'many'">
+              <method-choice :options="find.many" methodType="find"/>
+            </div> -->
+      </div>
+    </ng-container>
+  </ng-template>
+  <ng-template #stringdemo>
+    <ng-container *ngIf="selectedFilter === 'string'; else orderingdemo">
+      <div>
+        <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+      </div>
+    </ng-container>
+  </ng-template>
+  <ng-template #orderingdemo>
+    <ng-container *ngIf="selectedFilter === 'ordering'; else othersdemo">
+      <div>
+        <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+      </div>
+    </ng-container>
+  </ng-template>
+  <ng-template #othersdemo>
+    <ng-container *ngIf="selectedFilter === 'others'">
+      <div>
+        <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod>
+      </div>
+    </ng-container>
+  </ng-template>
+  <!-- <div if="selectedFilter === options[0]">
       <method-choice :options="adding" methodType="add"/>
     </div>
     <div v-else-if="selectedFilter === options[1]">

@@ -20,6 +20,11 @@
                 "string": "return a string",
                 "ordering" : "order an array",
                 "others": "something else"
+        },
+        "findMethod":"I'm trying to find",
+        "findMethodOptions":{
+            "single":"one item",
+            "many":"one or many items"
         }
     }
 }

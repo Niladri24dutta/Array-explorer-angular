@@ -14,12 +14,13 @@ export class AppprimarymethodComponent implements OnInit,OnDestroy{
   @Input() selectedFilter:string = '';
   message: any;
   subscription: Subscription;
-  
+  @Input() selectedFind:string = '';
   constructor(private service:MessageService) { 
     this.options = defaultOptions.primaryOptions;
     this.subscription = this.service.getResetValue().subscribe(message => { 
       this.message = message;
       this.selectedFilter = this.message.reset;
+      this.selectedFind = this.message.reset;
      });
   }
 
@@ -30,5 +31,9 @@ export class AppprimarymethodComponent implements OnInit,OnDestroy{
 
    ngOnInit(){
 
+   }
+
+   resetOptions(evt:any){
+     this.selectedFind = '';
    }
 }
