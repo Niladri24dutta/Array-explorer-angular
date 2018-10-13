@@ -2,22 +2,25 @@
   <div class="usage-code usage1">
     <p>
       <span>let arr = [5, 1, 8];</span><br>
-      <span *ngIf="selectedUsage"
+      <ng-container *ngIf="selectedUsage">
+          <teximate [text]="example" [effect]="effectOptions" [hover]="hoverOptions"></teximate>
+      </ng-container>
+      <!-- <span *ngIf="selectedUsage"
         class="exampleoutput"
-        [innerHTML]="example">
-      </span>
+        [innerHTML]="showExample()">
+      </span> -->
     </p>
   </div>
   <div *ngIf="selectedUsage" class="usage2">
     <h3 style="margin-top: 50px">{{ 'Usage.Output' | translate }}</h3>
     <div class="usage-code">
-      <p>
-        <span
+      <span>
+        <!-- <span
           class="exampleoutput2"
-          ref="ex2"
-          [innerHTML]="output">
-        </span>
-      </p>
+          [innerHTML]="showOutput()">
+        </span> -->
+        <teximate [text]="output" [effect]="effectOptions" [hover]="hoverOptions"></teximate>
+      </span>
     </div><!--usage-code-->
   </div>
 </aside>

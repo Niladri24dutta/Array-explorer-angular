@@ -1,3 +1,14 @@
-<p>
-  documentation works!
-</p>
+<div>
+  <ng-container *ngIf="urlPath === 'length'; else others">
+      <span >
+          <h2>Array.{{urlPath}}</h2>
+      </span>     
+  </ng-container>
+  <ng-template #others>
+      <span >
+          <h2>Array.{{urlPath}}()</h2>
+      </span> 
+  </ng-template>
+  <p class="desc" [innerHTML]="desc"></p>
+  <p class="link"><em><a href="{{ 'doc.fullUrl' | translate }}{{urlPath}}" target="_blank">see the docs &#8594;</a></em></p>
+</div>

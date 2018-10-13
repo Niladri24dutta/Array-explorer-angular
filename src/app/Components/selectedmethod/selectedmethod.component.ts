@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {arrayMethodOptions} from '../../languages/defaultconfig'
+import {MessageService} from '../../services/message.service'
 
 @Component({
   selector: 'app-selectedmethod',
@@ -11,13 +12,24 @@ export class SelectedmethodComponent implements OnInit {
   @Input() methodType:string = '';
   @Input() methodFindOption:string = '';
   selectedMethod:string = '';
-  options:string[] = [];
+  selectedDesc:string = '';
+  options:any[] = [];
   
-  constructor() { 
+  constructor(private msgService:MessageService) { 
 
   }
 
   ngOnInit() {
+    this.getMethodOptions();
+  }
+
+  public getDescription(evt:any){
+     let currentSelection = this.options.filter( x => x.name === this.selectedMethod)[0];
+     this.selectedDesc = currentSelection.desc;
+     this.msgService.sendMessage(true,currentSelection.example,currentSelection.output);
+  }
+
+  private getMethodOptions(){
     let selectedOption:any;
     let selectedFindOptions = [];
     if(this.methodFindOption === ''){
@@ -35,5 +47,8 @@ export class SelectedmethodComponent implements OnInit {
     } 
     //console.log(this.options);
   }
-
+  
+  clearMessage():void{
+    this.msgService.clearMessage();
+  }
 }
