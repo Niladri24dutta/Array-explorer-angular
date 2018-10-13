@@ -1,0 +1,16 @@
+div {
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    padding: 0 20px;
+    background: white;
+    border-radius: 5px;
+  }
+  h2 {
+    color: #ce371a;
+  }
+  p.desc {
+    margin-bottom: 0;
+  }
+  p.link {
+    margin-top: 5px;
+  }

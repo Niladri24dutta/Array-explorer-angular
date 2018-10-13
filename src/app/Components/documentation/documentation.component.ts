@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-documentation',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentationComponent implements OnInit {
 
-  constructor() { }
+  @Input() urlPath:string = '';
+  @Input() desc:string = '';
+  constructor(private service:TranslateService) { 
+  }
 
   ngOnInit() {
+    
   }
 
 }

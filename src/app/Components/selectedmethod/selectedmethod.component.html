@@ -1,20 +1,17 @@
-<!-- <p>
-  Method type is : {{methodType}}  and <span *ngIf="methodFindOption !==''">Method option is {{methodFindOption}}</span>
-</p> -->
 
 <div>
   <p>
     <label for="methodoptions">{{ 'primaryMethod.methodOptions' | translate}} {{ 'primaryMethod.methodTypes.'+methodType | translate }}</label>
-    <select id="methodoptions" name="select" [(ngModel)] ="selectedMethod" class="arrayOptions">
+    <select id="methodoptions" name="select" [(ngModel)] ="selectedMethod" class="arrayOptions" (change)="getDescription($event)">
       <option value="" disabled selected>...</option>
       <option *ngFor="let option of options" [value]="option.name">
         {{ 'primaryMethod.secondaryOptions.status.'+methodType+'.'+option.name+'.shortDesc' | translate }}
       </option>
     </select>
   </p>
-  <!-- <method-base v-show="isSelected" :urlPath="selected.name">
-    <span v-if="selected.name === 'length'" slot="title">Array.{{selected.name}}</span>
-    <span v-else slot="title">Array.{{selected.name}}()</span>
-    <span slot="desc" v-html="selected.desc"></span>
-  </method-base> -->
+ 
+  <ng-container *ngIf="selectedMethod !== ''">
+    <app-documentation [urlPath]="selectedMethod" [desc]="selectedDesc"></app-documentation>
+  </ng-container>
+  
 </div>
