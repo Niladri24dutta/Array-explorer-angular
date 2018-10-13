@@ -14,24 +14,26 @@ export class SelectedmethodComponent implements OnInit {
   options:string[] = [];
   
   constructor() { 
-   
-    
+
   }
 
   ngOnInit() {
-    let selectedOption = '';
+    let selectedOption:any;
     let selectedFindOptions = [];
     if(this.methodFindOption === ''){
-      console.log(this.methodType);
-      selectedOption = Object.keys(arrayMethodOptions.status).filter( x => x === this.methodType)[0];
-      this.options = arrayMethodOptions.status[selectedOption];
+      //console.log(this.methodType);
+      this.options  = Object.keys(arrayMethodOptions.status).filter( x => x === this.methodType).map ( p => arrayMethodOptions.status[p])[0];
+      
     }
     else{
-      this.options = Object.keys(arrayMethodOptions.status).filter( x => x === this.methodType)
-                                                           .map( val => {return arrayMethodOptions.status[val]} )
-                                                           .filter( fn => fn === this.methodFindOption);
+      selectedOption = Object.keys(arrayMethodOptions.status)
+                              .filter( x => x === this.methodType)
+                              .map( val => arrayMethodOptions.status[val] )[0];
+       this.options = Object.keys(selectedOption)
+                            .filter( x => x === this.methodFindOption)
+                            .map( v => selectedOption[v] )[0];                                                    
     } 
-    console.log(this.options);
+    //console.log(this.options);
   }
 
 }

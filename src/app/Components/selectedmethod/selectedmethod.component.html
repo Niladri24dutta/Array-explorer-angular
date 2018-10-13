@@ -1,14 +1,14 @@
-<p>
+<!-- <p>
   Method type is : {{methodType}}  and <span *ngIf="methodFindOption !==''">Method option is {{methodFindOption}}</span>
-</p>
+</p> -->
 
 <div>
   <p>
     <label for="methodoptions">{{ 'primaryMethod.methodOptions' | translate}} {{ 'primaryMethod.methodTypes.'+methodType | translate }}</label>
-    <select id="methodoptions" name="select" [(ngModel)] ="selectedMethod">
+    <select id="methodoptions" name="select" [(ngModel)] ="selectedMethod" class="arrayOptions">
       <option value="" disabled selected>...</option>
       <option *ngFor="let option of options" [value]="option.name">
-        {{ option.shortDesc }}
+        {{ 'primaryMethod.secondaryOptions.status.'+methodType+'.'+option.name+'.shortDesc' | translate }}
       </option>
     </select>
   </p>
