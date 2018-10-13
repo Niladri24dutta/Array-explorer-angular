@@ -25,6 +25,32 @@
         "findMethodOptions":{
             "single":"one item",
             "many":"one or many items"
-        }
+        },
+        "methodOptions":"I need to",
+        "methodTypes" : {
+            "add" : "add",
+            "remove" :  "remove",
+            "find" : "find",
+            "iterateby" :  "iterate by",
+            "string" : "string"
+          },
+          "secondaryOptions":{
+              "status" : {
+                  "add":{
+                      "splice" : {
+                          "shortDesc" : "element/s to an array"
+                      },
+                      "push":{
+                        "shortDesc" : "elements to the end of an array"
+                      },
+                      "unshift":{
+                        "shortDesc" : "elements to the front of an array"
+                      },
+                      "concat":{
+                        "shortDesc": "this array to other array(s) and/or value(s)"
+                      }
+                  }
+              }
+          }
     }
 }

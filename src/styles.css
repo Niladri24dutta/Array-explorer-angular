@@ -101,3 +101,8 @@ main {
 .usage {
   margin: 35px 0 0;
 }
+.arrayOptions{
+  width: 250px;
+  text-align: left;
+  font-size: large;
+}

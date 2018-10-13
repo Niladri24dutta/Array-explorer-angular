@@ -11,7 +11,8 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { UsageComponent } from './components/usage/usage.component';
 import {MessageService} from './services/message.service';
 import { AppprimarymethodComponent } from './components/appprimarymethod/appprimarymethod.component';
-import { SelectedmethodComponent } from './components/selectedmethod/selectedmethod.component'
+import { SelectedmethodComponent } from './components/selectedmethod/selectedmethod.component';
+import { DocumentationComponent } from './components/documentation/documentation.component'
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,7 +26,8 @@ export function createTranslateLoader(http: HttpClient) {
     SwitchlocaleComponent,
     UsageComponent,
     AppprimarymethodComponent,
-    SelectedmethodComponent
+    SelectedmethodComponent,
+    DocumentationComponent
   ],
   imports: [
     BrowserModule,

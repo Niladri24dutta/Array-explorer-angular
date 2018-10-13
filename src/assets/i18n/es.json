@@ -25,6 +25,32 @@
         "findMethodOptions":{
             "single":"un elemento",
             "many":"uno o mas elementos"
-        }
+        },
+        "methodOptions":"Necesito que",
+        "methodTypes" : {
+            "add" : "agregar",
+            "remove" :  "eliminar",
+            "find" : "buscar",
+            "iterateby" :  "iterar con",
+            "string" : "cadena de caracteres"
+          },
+          "secondaryOptions":{
+              "status" : {
+                  "add":{
+                      "splice" : {
+                          "shortDesc" : "elemento/s en un array"
+                      },
+                      "push":{
+                        "shortDesc" : "elementos al final de un array"
+                      },
+                      "unshift":{
+                        "shortDesc" : "elementos al principio de un array"
+                      },
+                      "concat":{
+                        "shortDesc": "este array con otro(s) array(s) y/o valor(es)"
+                      }
+                  }
+              }
+          }
     }
 }
