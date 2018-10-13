@@ -25,6 +25,14 @@
         "findMethodOptions":{
             "single":"one item",
             "many":"one or many items"
-        }
+        },
+        "methodOptions":"I need to",
+        "methodTypes" : {
+            "add" : "add",
+            "remove" :  "remove",
+            "find" : "find",
+            "iterateby" :  "iterate by",
+            "string" : "string"
+          }
     }
 }

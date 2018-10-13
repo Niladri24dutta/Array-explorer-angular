@@ -9,5 +9,22 @@
     },
     "Usage":{
         "Output":"نتيجة"
+    },
+    "primaryMethod":{
+        "firstMethod": "لدي مجموعة، أود",
+        "primaryOptions":{
+            "add" :"إضافة عناصر أو صفائف أخرى",
+            "remove" : "إزالة العناصر",
+            "find" : "العثور على العناصر",
+            "iterate": "المشي على العناصر",
+            "string": "إرجاع سلسلة",
+            "ordering" : "ترتيب مصفوفة",
+            "others": "شيء آخر"
+        },
+        "findMethod":"أحاول أن أجد",
+        "findMethodOptions":{
+            "single":"عنصر واحد",
+            "many":"واحد أو العديد من العناصر"
+        }
     }
 }   

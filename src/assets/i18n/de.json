@@ -9,5 +9,22 @@
     },
     "Usage":{
         "Output":"Ausgabe"
+    },
+    "primaryMethod":{
+        "firstMethod": "Ich habe einen Array und würde gerne",
+        "primaryOptions":{
+                "add" :"Elemente oder Arrays hinzufügen",
+                "remove" : "Elemente entfernen",
+                "find" : "Elemente finden",
+                "iterate": "Elemente durchlaufen",
+                "string": "einen String zurückgeben",
+                "ordering" : "einen Array sortieren",
+                "others": "etwas anderes machen"
+        },
+        "findMethod":"Ich möchte",
+        "findMethodOptions":{
+            "single":"ein Element finden",
+            "many":"ein oder mehrere Elemente finden"
+        }
     }
 }
