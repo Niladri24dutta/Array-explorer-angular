@@ -5,7 +5,12 @@
     <select id="methodoptions" name="select" [(ngModel)] ="selectedMethod" class="arrayOptions" (change)="getDescription($event)">
       <option value="" disabled selected>...</option>
       <option *ngFor="let option of options" [value]="option.name">
-        {{ 'primaryMethod.secondaryOptions.status.'+methodType+'.'+option.name+'.shortDesc' | translate }}
+        <ng-container *ngIf="methodFindOption !== '';else others">
+            {{ 'primaryMethod.secondaryOptions.status.'+methodType+'.'+methodFindOption+'.'+option.name+'.shortDesc' | translate }}
+        </ng-container>
+        <ng-template #others>
+            {{ 'primaryMethod.secondaryOptions.status.'+methodType+'.'+option.name+'.shortDesc' | translate }}
+        </ng-template>
       </option>
     </select>
   </p>
