@@ -186,7 +186,7 @@ export const arrayMethodOptions = {
         desc:
           'The forEach() method executes a provided function once for each array element.',
         example: `arr.forEach((element) => {
-        <span>&nbsp;&nbsp;</span>console.log(element)
+        console.log(element)
         });`,
         output: `5
         1
@@ -210,8 +210,8 @@ export const arrayMethodOptions = {
         example: `let iterator = arr.entries();
         console.log(iterator.next().value);`,
         output: `[0, 5]
-        <span class="comment">// the 0 is the index,</span>
-        <span class="comment">// the 5 is the first number</span>`
+        // the 0 is the index,
+        // the 5 is the first number`
       }
     ],
     find: {

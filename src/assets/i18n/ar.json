@@ -10,6 +10,9 @@
     "Usage":{
         "Output":"نتيجة"
     },
+    "doc":{
+        "fullUrl":"https://developer.mozilla.org/ar/docs/Web/JavaScript/Reference/Global_Objects/Array/"
+    },
     "primaryMethod":{
         "firstMethod": "لدي مجموعة، أود",
         "primaryOptions":{
