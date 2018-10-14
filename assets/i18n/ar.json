@@ -1,0 +1,33 @@
+{
+    "app":{
+        "Title": "مستكشف صفيف JavaScript (باستخدام Angular)",
+        "Subtitle": "العثور على طريقة المصفوفة التي تحتاج إليها دون حفر من خلال الوثائق",
+        "Usage":"استعمال"
+    },
+    "selectlanguage":{
+        "Title":"لغة"
+    },
+    "Usage":{
+        "Output":"نتيجة"
+    },
+    "doc":{
+        "fullUrl":"https://developer.mozilla.org/ar/docs/Web/JavaScript/Reference/Global_Objects/Array/"
+    },
+    "primaryMethod":{
+        "firstMethod": "لدي مجموعة، أود",
+        "primaryOptions":{
+            "add" :"إضافة عناصر أو صفائف أخرى",
+            "remove" : "إزالة العناصر",
+            "find" : "العثور على العناصر",
+            "iterate": "المشي على العناصر",
+            "string": "إرجاع سلسلة",
+            "ordering" : "ترتيب مصفوفة",
+            "others": "شيء آخر"
+        },
+        "findMethod":"أحاول أن أجد",
+        "findMethodOptions":{
+            "single":"عنصر واحد",
+            "many":"واحد أو العديد من العناصر"
+        }
+    }
+}   

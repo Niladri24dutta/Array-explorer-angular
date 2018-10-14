@@ -1,0 +1,150 @@
+{
+    "app":{
+        "Title": "JavaScript Array Explorer (usando Angular)",
+        "Subtitle": "Encuentre el método de matriz que necesita sin tener que buscar entre los documentos",
+        "Usage":"Uso"
+    },
+    "selectlanguage":{
+        "Title":"Idioma"
+    },
+    "Usage":{
+        "Output":"Resultado"
+    },
+    "doc":{
+        "fullUrl":"https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/"
+    },
+    "primaryMethod":{
+        "firstMethod": "Tengo un array, me gustaría",
+        "primaryOptions":{
+            "add" :"agregar elementos u otros arrays",
+            "remove" : "eliminar elementos",
+            "find" : "buscar elementos",
+            "iterate": "pasar entre elementos",
+            "string": "devolver una cadena de caracteres",
+            "ordering" : "ordenar un array",
+            "others": "cualquier otra cosa"
+        },
+        "findMethod":"Estoy intentando encontrar",
+        "findMethodOptions":{
+            "single":"un elemento",
+            "many":"uno o mas elementos"
+        },
+        "methodOptions":"Necesito que",
+        "methodTypes" : {
+            "add" : "agregar",
+            "remove" :  "eliminar",
+            "find" : "buscar",
+            "iterateby" :  "iterar con",
+            "string" : "cadena de caracteres"
+          },
+          "secondaryOptions":{
+              "status" : {
+                  "add":{
+                      "splice" : {
+                          "shortDesc" : "elemento/s en un array"
+                      },
+                      "push":{
+                        "shortDesc" : "elementos al final de un array"
+                      },
+                      "unshift":{
+                        "shortDesc" : "elementos al principio de un array"
+                      },
+                      "concat":{
+                        "shortDesc": "este array con otro(s) array(s) y/o valor(es)"
+                      }
+                  },
+                  "remove":{
+                      "splice":{                      
+                            "shortDesc" : "elemento/s en un array"          
+                      },
+                      "pop" :{
+                        "shortDesc" : "el último elemento del array" 
+                      },
+                      "shift":{
+                        "shortDesc" : "el primer elemento del array" 
+                      },
+                      "slice":{
+                        "shortDesc" : "uno o más elementos en orden de uso, dejando el array como está" 
+                      }
+                  },
+                  "string":{
+                      "join" :{
+                        "shortDesc" : "unir todos los elementos del array en una cadena" 
+                      },
+                      "toString":{
+                        "shortDesc" : "devolver una cadena de caracteres representando el array"  
+                      },
+                      "toLocaleString" :{
+                        "shortDesc" : "devolver la representación del array como una cadena utilizando la configuración regional"   
+                      }
+                  },
+                  "ordering":{
+                      "reverse":{
+                        "shortDesc" : "invertir el orden del array"
+                      },
+                   "sort" :{
+                    "shortDesc" : "ordenar los elementos del array"
+                   }
+                  },
+                "others" :{
+                    "length" :{
+                        "shortDesc" : "encontrar la longitud del array"
+                    },
+                    "fill":{
+                        "shortDesc" : "llenar todos los elementos del array con un valor estático"
+                    },
+                    "copyWithin":{
+                        "shortDesc" : "copiar una secuencia de elementos del array dentro del array"
+                    }
+                 },
+                 "iterate":{
+                     "forEach" :{
+                        "shortDesc" : "ejecutar una función creada para cada elemento"
+                     },
+                     "map":{
+                        "shortDesc" : "crear un nuevo array a partir de cada elemento con una función creada por el usuario"
+                     },
+                     "entries":{
+                        "shortDesc" : "crear un objeto iterador"
+                     }
+                 },
+                 "find" :{
+                     "single" :{
+                         "includes" :{
+                            "shortDesc" : "si existe un elemento determinado"
+                         },
+                        "indexOf":{
+                            "shortDesc" : "el primer índice en el que se puede encontrar un elemento"  
+                        },
+                        "lastIndexOf":{
+                            "shortDesc" : "el ultimo índice en el que se puede encontrar un elemento"
+                        },
+                        "find":{
+                            "shortDesc" : "el primer elemento que satisface una condición"
+                        },
+                        "findIndex":{
+                            "shortDesc" : "el primer índice de un artículo que satisface una condición"
+                        },
+                        "reduce":{
+                            "shortDesc" : "un valor para reducir el Array, de principio a fin"
+                        },
+                        "reduceRight":{
+                            "shortDesc" : "un valor para reducir el Array, de fin a principio"
+                        }
+                     },
+                     "many":{
+                         "filter":{
+                            "shortDesc" : "valores basados en una condición que usted crea"
+                         },
+                         "every":{
+                            "shortDesc" : "si cada elemento satisface o no una condición"
+                         },
+                         "some":{
+                            "shortDesc" : "si un elemento cumple o no al menos una condición"
+                         }
+                     }
+                 }
+              }
+          }
+    }
+}
