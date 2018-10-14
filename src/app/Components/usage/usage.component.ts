@@ -16,17 +16,30 @@ export class UsageComponent implements OnInit,OnDestroy {
   @Input() selectedUsage:boolean = false;
   example:string = ''
   output:string = ''
+  // effectOptions: TeximateOptions = {
+  //   type: 'word',
+  //   animation: { name: 'zoomInLeft', duration: 1000 },
+  //   word: { type: TeximateOrder.SHUFFLE, delay: 100 },
+  //   letter: { type: TeximateOrder.SHUFFLE, delay: 50 }
+  // };
+
+  // hoverOptions: TeximateHover = {
+  //   type: 'word',
+  //   in: 'zoomOutUp',
+  //   out: 'bounceInDown'
+  // };
+
   effectOptions: TeximateOptions = {
-    type: 'word',
-    animation: { name: 'zoomInLeft', duration: 1000 },
+    type: 'letter',
+    animation: { name: 'bounceInLeft', duration: 1000 },
     word: { type: TeximateOrder.SHUFFLE, delay: 100 },
     letter: { type: TeximateOrder.SHUFFLE, delay: 50 }
   };
 
   hoverOptions: TeximateHover = {
-    type: 'word',
-    in: 'zoomOutUp',
-    out: 'bounceInDown'
+    type: 'letter',
+    in: 'zoomIn',
+    out: 'headShake'
   };
 
   constructor(private sanitizer:DomSanitizer,private messageService: MessageService) {
