@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {arrayMethodOptions} from '../../languages/defaultconfig'
 import {MessageService} from '../../services/message.service'
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-selectedmethod',
@@ -14,9 +15,10 @@ export class SelectedmethodComponent implements OnInit {
   selectedMethod:string = '';
   selectedDesc:string = '';
   options:any[] = [];
+  keyName:string = ''
   
-  constructor(private msgService:MessageService) { 
-
+  constructor(private msgService:MessageService,private translateService :TranslateService) { 
+    
   }
 
   ngOnInit() {
@@ -25,7 +27,15 @@ export class SelectedmethodComponent implements OnInit {
 
   public getDescription(evt:any){
      let currentSelection = this.options.filter( x => x.name === this.selectedMethod)[0];
-     this.selectedDesc = currentSelection.desc;
+     if(this.methodFindOption !== ''){
+      this.keyName = "primaryMethod.secondaryOptions.status."+this.methodType+"."+this.methodFindOption+"."+this.selectedMethod+".desc";
+    }
+    else{
+      this.keyName = "primaryMethod.secondaryOptions.status."+this.methodType+"."+this.selectedMethod+".desc";
+    }   
+    this.translateService.get(this.keyName).subscribe( x =>{
+      this.selectedDesc = x
+    } );
      this.msgService.sendMessage(true,currentSelection.example,currentSelection.output);
   }
 

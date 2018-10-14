@@ -41,106 +41,135 @@
               "status" : {
                   "add":{
                       "splice" : {
-                          "shortDesc" : "Elemente in einen Array einfügen"
+                          "shortDesc" : "Elemente in einen Array einfügen",
+                          "desc":"Fügt Elemente zu einem Array hinzu oder entfernt welche."
                       },
                       "push":{
-                        "shortDesc" : "elements to the end of an array"
+                        "shortDesc" : "Elemente an das Ende eines Arrays anhängen",
+                        "desc":"Hängt ein oder mehrere Elemente an einen Array an und gibt die neue Länge des Arrays zurück."
                       },
                       "unshift":{
-                        "shortDesc" : "elements to the front of an array"
+                        "shortDesc" : "Elemente an den Anfang eines Arrays hinzufügen",
+                        "desc":"Fügt ein oder mehrere Elemente an den Anfang eines Arrays an und gibt die neue Länge des Arrays zurück."
                       },
                       "concat":{
-                        "shortDesc": "this array to other array(s) and/or value(s)"
+                        "shortDesc": "diesen Array zu anderen Arrays und/oder Werten hinzufügen",
+                        "desc":"Gibt einen neuen Array bestehend aus diesem Array zusammen mit anderen Array(s) und/oder Werten zurück."
                       }
                   },
                   "remove":{
                       "splice":{                      
-                            "shortDesc" : "element/s to an array"          
+                            "shortDesc" : "Elemente aus einem Array entfernen",
+                            "desc":"Fügt Elemente einem Array hinzu und/oder entfernt welche."          
                       },
                       "pop" :{
-                        "shortDesc" : "the last element of the array" 
+                        "shortDesc" : "das letzte Element eines Arrays entfernen",
+                        "desc":"Entfernt das letzte Element eines Arrays und gibt es zurück." 
                       },
                       "shift":{
-                        "shortDesc" : "the first element of the array" 
+                        "shortDesc" : "das erste Element eines Arrays entfernen",
+                        "desc":"Entfernt das erste Element eines Arrays und gibt es zurück." 
                       },
                       "slice":{
-                        "shortDesc" : "one or more elements in order for use, leaving the array as is" 
+                        "shortDesc" : "mindestens ein Element, ohne den eigentlichen Array zu verändern, entfernen" ,
+                        "desc":"Die <code>slice()</code>-Methode schreibt eine flache Kopie eines Teils des Arrays in ein neues Array-Objekt. Man kann entweder nur den Index für das letzte Elemente (dann wird der Index für das erste Element auf 0 gesetzt) oder sowohl den Index für das erste und das letzte Element kommagetrennt angeben. Der Original-Array wird nicht verändert."
                       }
                   },
                   "string":{
                       "join" :{
-                        "shortDesc" : "join all elements of the array into a string" 
+                        "shortDesc" : "alle Elemente eines Arrays in einen String zusammenführen.",
+                        "desc":"Führt alle Elemente eines Arrays in einem String zusammen. Man kann die Elemente entweder mit oder ohne Trennzeichen zusammenführen. <code>elements.join(' -')</code> gibt <code>foo-bar</code>" 
                       },
                       "toString":{
-                        "shortDesc" : "return a string representing the array"  
+                        "shortDesc" : "einen String, der den Array repräsentiert, zurückgegeben." ,
+                        "desc":"Gibt einen String, der den Array und alle darin enthaltenen Elemente beinhaltet, zurück." 
                       },
                       "toLocaleString" :{
-                        "shortDesc" : "return a localized string representing the array"   
+                        "shortDesc" : "einen an die Sprache angepassten String, der den Array repräsentiert, zurückgeben.",
+                        "desc":"Diese Methode ist ein bisschen komisch. Sie gibt einen an die Sprache angepassten String, der den Array und alle seine Elemente beinhaltet, zurück. Dies ist sehr nützlich für Datumsangaben und Währungen, hat aber einige seltsame Verhaltensweisen, so dass du am besten die genaue Dokumentation durchlesen solltest."   
                       }
                   },
                   "ordering":{
                       "reverse":{
-                        "shortDesc" : "reverse the order of the array"
+                        "shortDesc" : "die Reihenfolge eines Arrays umkehren",
+                        "desc":"Kehrt die Reihenfolge der Elemente in einem Array um, das erste wird zum letzten Element, das letzte zum ersten."
                       },
                    "sort" :{
-                    "shortDesc" : "sort the items of the array"
+                    "shortDesc" : "die Elemente in einem Array sortieren",
+                    "desc":"Sortiert die Elemente eines Arrays in aufsteigender Reihenfolge."
                    }
                   },
                 "others" :{
                     "length" :{
-                        "shortDesc" : "find the length of the array"
+                        "shortDesc" : "die Länge des Arrays herausfinden",
+                        "desc":"Gibt die Zahl aller Elemente in einem Array zurück."
                     },
                     "fill":{
-                        "shortDesc" : "fill all the elements of the array with a static value"
+                        "shortDesc" : "allen Elementen des Arrays einen bestimmten Wert zuweisen",
+                        "desc":"Weist alle Elementen in einem Array vom Start- bis zum Endindex einen bestimmten Wert zu."
                     },
                     "copyWithin":{
-                        "shortDesc" : "copy a sequence of array elements within the array"
+                        "shortDesc" : "einen Folge von Elementen des Arrays innerhalb des Arrays kopieren",
+                        "desc":"Kopiert eine Reihe von Elementen des Arrays innerhalb des Arrays. Du kannst entweder nur das letzte Element (dann wird der Startindex auf 0 gesetzt) oder sowohl das erste als auch das letzte kommagetrennt festlegen."
                     }
                  },
                  "iterate":{
                      "forEach" :{
-                        "shortDesc" : "executing a function I will create for each element"
+                        "shortDesc" : "eine selbstdefinierte Funktion auf jedes Elemente des Arrays anwenden",
+                        "desc":"Die <code>forEach()</code>-Methode wendet eine gegebene Funktion auf jedes Element im Array an."
                      },
                      "map":{
-                        "shortDesc" : "creating a new array from each element with a function I create"
+                        "shortDesc" : "einen neuen Array basierend auf einer auf alle Elemente angewendeten Funktion erstellen",
+                        "desc":"Erstellt einen neuen Array, dessen Elemente auf dem gegebenem Array, auf die eine gegebene Funktion angewendet wurde, basieren."
                      },
                      "entries":{
-                        "shortDesc" : "creating an iterator object"
+                        "shortDesc" : "ein Iterator-Objekt erstellen",
+                        "desc":"Gibt ein Iterator-Objekt zurück, das zu jedem Index den Wert des Elements beinhaltet. Es gibt eine Vielzahl an Anwendungen für Iteratoren und andere Methoden, die in Verbindung mit Iteratoren genutzt werden, wie <code>key</code> oder <code>value</code>."
                      }
                  },
                  "find" :{
                      "single" :{
                          "includes" :{
-                            "shortDesc" : "out if a certain element exists"
+                            "shortDesc" : "herausfinden, ob ein bestimmtes Element im Array vorkommt",
+                            "desc":"Existiert ein bestimmtes Element im Array, wird true, ansonsten false, zurückgegeben."
                          },
                         "indexOf":{
-                            "shortDesc" : "the first index of a particular item"  
+                            "shortDesc" : "herausfinden, was der erste Index eines Elements ist",
+                            "desc":"Gibt den ersten Index, an dem das Element gefunden werden kann, zurück, oder -1, falls es nicht vorkommt."
                         },
                         "lastIndexOf":{
-                            "shortDesc" : "the last index of a particular item"
+                            "shortDesc" : "den letzten Index eines Elements finden",
+                            "desc":"Gibt den letzten (größten) Index zurück, an dem ein Element gefunden werden kann, oder -1, falls es nicht im Array vorkommt."
                         },
                         "find":{
-                            "shortDesc" : "the first element that satisfies a condition"
+                            "shortDesc" : "das erste Element, das eine Bedingung erfüllt, finden",
+                            "desc":"Gibt das erste gefundene Element aus dem Array zurück, das die gegebene Bedingung erfüllt, wenn mindestens ein Element die gegebene Bedingung erfüllt, sonst wird undefined zurückgegeben. Ähnlich zu <code>findIndex()</code>, aber <code>find()</code> gibt das Element und nicht den Index zurück."
                         },
                         "findIndex":{
-                            "shortDesc" : "the first index of an item that satisfies a condition"
+                            "shortDesc" : "den ersten Index eines Elements, das eine Bedingung erfüllt, finden",
+                            "desc":"Gibt den Index des ersten Elements im Array, das die gegebene Bedingung erfüllt, zurück. Erfüllt kein Element die Bedingung, wird -1 zurückgegeben. Ähnlich zu <code>find()</code>, aber <code>findIndex()</code> gibt den Index statt des Elements zurück."
                         },
                         "reduce":{
-                            "shortDesc" : "a value by reducing the Array, start to finish"
+                            "shortDesc" : "den Array auf einen einzigen Wert reduzieren, von links nach rechts",
+                            "desc":"Reduziert das Array auf einen einzigen Wert, indem es jeweils zwei Elemente (von links nach rechts) durch eine angegebene Funktion reduziert."
                         },
                         "reduceRight":{
-                            "shortDesc" : "a value by reducing the Array, finish to start"
+                            "shortDesc" : "den Array auf einen einzigen Wert reduzieren, von rechts nach links",
+                            "desc":"Wendet eine Funktion gegen einen Akkumulator auf jeden Wert des Arrays (von rechts nach links) an und reduziert es um einen einzelnen Wert."
                         }
                      },
                      "many":{
                          "filter":{
-                            "shortDesc" : "values based on a condition I create"
+                            "shortDesc" : "Werte basierend auf einer selbsterstellten Bedingung finden",
+                            "desc":"Erstellt einen neuen Array mit allen Elementen des Strings, die eine gegebene Bedingung erfüllen."
                          },
                          "every":{
-                            "shortDesc" : "whether or not every item satisfies a condition"
+                            "shortDesc" : "herausfinden, ob alle Elemente des Arrays eine Bedingung erfüllen",
+                            "desc":"Gibt true zurück, wenn alle Elemente des Arrays eine gegebene Bedingung erfüllen."
                          },
                          "some":{
-                            "shortDesc" : "whether or not at least one item satisfies a condition"
+                            "shortDesc" : "herausfinden, ob mindestens ein Element im Array eine Bedingung erfüllt",
+                            "desc":"Gibt true zurück, wenn zumindest ein Element des Arrays eine gegebene Bedingung erfüllt."
                          }
                      }
                  }
