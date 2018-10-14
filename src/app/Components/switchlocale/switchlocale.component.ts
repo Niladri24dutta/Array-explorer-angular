@@ -21,7 +21,6 @@ export class SwitchlocaleComponent implements OnInit {
 
   changeDefaultLanguage(evt:any){
     let currentLanguage = evt.target.value;
-    console.log(currentLanguage);
     this.translate.use(currentLanguage);
     this.msgService.resetLocale('');
   }

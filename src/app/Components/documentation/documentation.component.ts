@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class DocumentationComponent implements OnInit {
 
   @Input() urlPath:string = '';
+  
   @Input() desc:string = '';
   constructor(private service:TranslateService) { 
   }

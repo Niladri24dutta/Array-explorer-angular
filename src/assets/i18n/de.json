@@ -41,16 +41,20 @@
               "status" : {
                   "add":{
                       "splice" : {
-                          "shortDesc" : "Elemente in einen Array einfügen"
+                          "shortDesc" : "Elemente in einen Array einfügen",
+                          "desc":"Fügt Elemente zu einem Array hinzu oder entfernt welche."
                       },
                       "push":{
-                        "shortDesc" : "elements to the end of an array"
+                        "shortDesc" : "Elemente an das Ende eines Arrays anhängen",
+                        "desc":"Hängt ein oder mehrere Elemente an einen Array an und gibt die neue Länge des Arrays zurück."
                       },
                       "unshift":{
-                        "shortDesc" : "elements to the front of an array"
+                        "shortDesc" : "Elemente an den Anfang eines Arrays hinzufügen",
+                        "desc":"Fügt ein oder mehrere Elemente an den Anfang eines Arrays an und gibt die neue Länge des Arrays zurück."
                       },
                       "concat":{
-                        "shortDesc": "this array to other array(s) and/or value(s)"
+                        "shortDesc": "diesen Array zu anderen Arrays und/oder Werten hinzufügen",
+                        "desc":"Gibt einen neuen Array bestehend aus diesem Array zusammen mit anderen Array(s) und/oder Werten zurück."
                       }
                   },
                   "remove":{

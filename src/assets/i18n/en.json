@@ -43,16 +43,20 @@
               "status" : {
                   "add":{
                       "splice" : {
-                          "shortDesc" : "element/s to an array"
+                          "shortDesc" : "element/s to an array",
+                          "desc":"Adds and/or removes elements from an array."
                       },
                       "push":{
-                        "shortDesc" : "elements to the end of an array"
+                        "shortDesc" : "elements to the end of an array",
+                        "desc":"Adds one or more elements to the end of an array and returns the new length of the array."
                       },
                       "unshift":{
-                        "shortDesc" : "elements to the front of an array"
+                        "shortDesc" : "elements to the front of an array",
+                        "desc":"Adds one or more elements to the front of an array and returns the new length of the array."
                       },
                       "concat":{
-                        "shortDesc": "this array to other array(s) and/or value(s)"
+                        "shortDesc": "this array to other array(s) and/or value(s)",
+                        "desc":"Returns a new array comprised of this array joined with other array(s) and/or value(s)."
                       }
                   },
                   "remove":{

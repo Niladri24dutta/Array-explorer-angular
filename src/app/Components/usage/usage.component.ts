@@ -34,8 +34,6 @@ export class UsageComponent implements OnInit,OnDestroy {
                this.selectedUsage = message.usage;
                this.example = message.input;
                this.output =  message.op;
-               console.log(this.example);
-               console.log(this.output);
               });
       this.onLanguageChange = this.messageService.getResetValue().subscribe((message:any) => { 
               this.selectedUsage = message.reset;
