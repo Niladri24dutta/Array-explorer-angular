@@ -8,6 +8,7 @@
 
 # dependencies
 /node_modules
+/release-builds
 
 # IDEs and editors
 /.idea
