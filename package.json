@@ -1,14 +1,20 @@
 {
-  "name": "angular-array-explorer",
+  "name": "angular_array_explorer",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "ng build && electron .",
+    "electron-aot": "ng build --prod --base-href=./ && electron .",
+    "electron-package-win": "ng build --prod --base-href=./ && electron-packager . ArrayExplorer --platform=win32  --arch=ia32  --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --out=release-builds --asar",
+    "electron-package-mac": "ng build --prod --base-href=./ && electron-packager .  ArrayExplorer --platform=darwin --arch=x64  --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --out=release-builds --asar",
+    "electron-package-linux": "ng build --prod --base-href=./ && electron-packager . ArrayExplorer --overwrite  --platform=linux --arch=x64  --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --out=release-builds --asar"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +31,7 @@
     "@ngx-translate/http-loader": "^2.0.1",
     "animate.css": "^3.7.0",
     "core-js": "^2.4.1",
+    "electron-squirrel-startup": "^1.0.0",
     "ng-teximate": "^0.6.3",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
@@ -37,6 +44,8 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "electron": "^3.0.6",
+    "electron-packager": "^12.2.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
