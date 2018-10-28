@@ -28,7 +28,6 @@
   <ng-template #findelm>
     <ng-container *ngIf="selectedFilter === 'find'; else stringdemo">
       <div>
-        <!-- <app-selectedmethod [methodType]="selectedFilter"></app-selectedmethod> -->
         <p>
           <label for="findmethod">{{ 'primaryMethod.findMethod' | translate }}</label>
           <select id="findMethod" name="selectfind" [(ngModel)]="selectedFind" class="arrayOptions">
@@ -50,10 +49,6 @@
             </div>
           </ng-container>
         </ng-template>
-
-        <!-- <div v-else-if="selectedFind === 'many'">
-              <method-choice :options="find.many" methodType="find"/>
-            </div> -->
       </div>
     </ng-container>
   </ng-template>
@@ -78,42 +73,4 @@
       </div>
     </ng-container>
   </ng-template>
-  <!-- <div if="selectedFilter === options[0]">
-      <method-choice :options="adding" methodType="add"/>
-    </div>
-    <div v-else-if="selectedFilter === options[1]">
-      <method-choice :options="removing" methodType="remove"/>
-    </div>
-    <div v-else-if="selectedFilter === options[3]">
-      <method-choice :options="iterate" methodType="iterate by"/>
-    </div>
-    <div v-else-if="selectedFilter === options[2]">
-
-      <p>
-        <label for="findmethod">{{$t('findMethod', "I'm trying to find")}}</label>
-        <select id="findMethod" name="select" v-model="selectedFind">
-          <option value="" disabled selected>...</option>
-          <option value="single">{{$t('singleItem', 'one item')}}</option>
-          <option value="many">{{$t('manyItems', 'one or many items')}}</option>
-        </select>
-      </p>
-
-      <div v-if="selectedFind === 'single'">
-        <method-choice :options="find.single" methodType="find"/>
-      </div>
-
-      <div v-else-if="selectedFind === 'many'">
-        <method-choice :options="find.many" methodType="find"/>
-      </div>
-
-    </div>
-    <div v-else-if="selectedFilter === options[5]">
-      <method-choice :options="ordering"/>
-    </div>
-    <div v-else-if="selectedFilter === options[4]">
-      <method-choice :options="string"/>
-    </div>
-    <div v-else-if="selectedFilter === options[6]">
-      <method-choice :options="other"/>
-    </div> -->
 </div>

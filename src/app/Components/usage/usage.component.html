@@ -5,22 +5,14 @@
       <ng-container *ngIf="selectedUsage">
           <teximate [text]="example" [effect]="effectOptions" [hover]="hoverOptions"></teximate>
       </ng-container>
-      <!-- <span *ngIf="selectedUsage"
-        class="exampleoutput"
-        [innerHTML]="showExample()">
-      </span> -->
     </p>
   </div>
   <div *ngIf="selectedUsage" class="usage2">
     <h3 style="margin-top: 50px">{{ 'Usage.Output' | translate }}</h3>
     <div class="usage-code">
       <span>
-        <!-- <span
-          class="exampleoutput2"
-          [innerHTML]="showOutput()">
-        </span> -->
         <teximate [text]="output" [effect]="effectOptions" [hover]="hoverOptions"></teximate>
       </span>
-    </div><!--usage-code-->
+    </div>
   </div>
 </aside>

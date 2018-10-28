@@ -11,7 +11,6 @@ export class AppComponent {
   showUsage:boolean = false;
   
   constructor(private translate: TranslateService) {
-    //let language =  window.navigator.language; 
     this.translate.setDefaultLang('en');
   }
 
