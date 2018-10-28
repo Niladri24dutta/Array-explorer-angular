@@ -1,4 +1,4 @@
-# Array Explorer using Angular 5
+# Array Explorer using Angular 5 and Electron
 
 (inspired by [Array explorer](https://github.com/sdras/array-explorer/) project of [@sdras](https://github.com/sdras))
 
@@ -8,6 +8,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 [Github demo page](https://niladri24dutta.github.io/Array-explorer-angular/)
 
+## Build desktop version for Windows,Mac OSX and Linux(using Electron)
+
+- For windows run the command `npm run electron-package-win` 
+- For Mac run the command `npm run electron-package-mac`
+- For Linux run the command `npm run electron-package-linux`
+- For AOT build with Electron run the command `npm run electron-aot`
 
 ## Development server
 
