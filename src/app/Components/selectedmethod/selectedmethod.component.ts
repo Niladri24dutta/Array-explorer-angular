@@ -43,7 +43,6 @@ export class SelectedmethodComponent implements OnInit {
     let selectedOption:any;
     let selectedFindOptions = [];
     if(this.methodFindOption === ''){
-      //console.log(this.methodType);
       this.options  = Object.keys(arrayMethodOptions.status).filter( x => x === this.methodType).map ( p => arrayMethodOptions.status[p])[0];
       
     }
@@ -55,7 +54,7 @@ export class SelectedmethodComponent implements OnInit {
                             .filter( x => x === this.methodFindOption)
                             .map( v => selectedOption[v] )[0];                                                    
     } 
-    //console.log(this.options);
+    
   }
   
   clearMessage():void{
