@@ -30,6 +30,11 @@ function createWindow () {
     slashes: true
   }))
 
+  win.webContents.on('new-window', function(e, url) {
+    e.preventDefault();
+    require('electron').shell.openExternal(url);
+  });
+
   // Open the DevTools optionally:
   // win.webContents.openDevTools()
 
