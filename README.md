@@ -4,6 +4,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+## npm packages used
+    "ng-teximate": "^0.6.3",
+    "ngx-clipboard": "^10.0.0",
+    "primeng": "^5.2.7",
+    "@ngx-translate/core": "^9.1.1",
+    "@ngx-translate/http-loader": "^2.0.1",
+    "@stackblitz/sdk": "^1.5.1",
+    "animate.css": "^3.7.0",
+
 ## Demo URL
 
 [Github demo page](https://niladri24dutta.github.io/Array-explorer-angular/)
