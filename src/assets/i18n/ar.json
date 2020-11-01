@@ -2,7 +2,8 @@
     "app":{
         "Title": "مستكشف صفيف JavaScript (باستخدام Angular)",
         "Subtitle": "العثور على طريقة المصفوفة التي تحتاج إليها دون حفر من خلال الوثائق",
-        "Usage":"استعمال"
+        "Usage":"استعمال",
+        "Playground":"جربه أدناه"
     },
     "selectlanguage":{
         "Title":"لغة"

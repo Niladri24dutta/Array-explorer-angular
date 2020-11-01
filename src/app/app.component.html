@@ -1,5 +1,6 @@
 <div id="app">
-  <app-github-repo></app-github-repo>
+  <p-growl [(value)]="msgs"></p-growl>
+  <!-- <app-github-repo></app-github-repo> -->
   <app-switchlocale></app-switchlocale>
   <br>
   <main>
@@ -13,4 +14,6 @@
       <app-usage [selectedUsage]="showUsage"></app-usage>
     </section>
   </main>
+<br>
+<app-stackblitz-sample></app-stackblitz-sample>
 </div>

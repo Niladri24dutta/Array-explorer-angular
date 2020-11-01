@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {locales} from '../../languages/locale'
 import { TranslateService } from '@ngx-translate/core';
-import {MessageService} from '../../services/message.service'
+import {MessagesService} from '../../services/message.service'
 
 @Component({
   selector: 'app-switchlocale',
@@ -12,7 +12,7 @@ export class SwitchlocaleComponent implements OnInit {
 
   languages:any[] = [];
   selectedLanguage:string = 'en';
-  constructor(private translate: TranslateService,private msgService:MessageService) { 
+  constructor(private translate: TranslateService,private msgService:MessagesService) { 
     this.languages = locales;
   }
   

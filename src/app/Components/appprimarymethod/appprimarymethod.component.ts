@@ -1,6 +1,6 @@
 import { Component, OnInit,Input,OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs'
-import {MessageService} from '../../services/message.service'
+import {MessagesService} from '../../services/message.service'
 import {defaultOptions} from '../../languages/defaultconfig'
 
 @Component({
@@ -15,7 +15,7 @@ export class AppprimarymethodComponent implements OnInit,OnDestroy{
   message: any;
   subscription: Subscription;
   @Input() selectedFind:string = '';
-  constructor(private service:MessageService) { 
+  constructor(private service:MessagesService) { 
     this.options = defaultOptions.primaryOptions;
     this.subscription = this.service.getResetValue().subscribe(message => { 
       this.message = message;

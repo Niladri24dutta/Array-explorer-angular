@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable,Subject} from 'rxjs';
 
 @Injectable()
-export class MessageService {
+export class MessagesService {
     private subject = new Subject<any>();
     private resetSubject = new Subject<any>();
 
