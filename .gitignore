@@ -5,7 +5,7 @@
 /dist-server
 /tmp
 /out-tsc
-
+package-lock.json
 # dependencies
 /node_modules
 /release-builds
@@ -18,7 +18,6 @@
 *.launch
 .settings/
 *.sublime-workspace
-
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
