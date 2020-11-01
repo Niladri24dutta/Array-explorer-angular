@@ -1,8 +1,10 @@
 import { Component, OnInit, Input,OnDestroy } from '@angular/core';
 import { DomSanitizer,SafeHtml } from '@angular/platform-browser'
 import { Subscription } from 'rxjs';
-import { MessageService } from '../../services/message.service';
+import { MessagesService } from '../../services/message.service';
+import { NotificationService } from '../../services/notification.service';
 import {TeximateOptions,TeximateHover,TeximateOrder} from "ng-teximate";
+import { ClipboardService } from 'ngx-clipboard';
 
 @Component({
   selector: 'app-usage',
@@ -30,7 +32,8 @@ export class UsageComponent implements OnInit,OnDestroy {
     out: 'headShake'
   };
 
-  constructor(private sanitizer:DomSanitizer,private messageService: MessageService) {
+  constructor(private sanitizer:DomSanitizer,private messageService: MessagesService,private clipboardService: ClipboardService,
+             private notificationService:NotificationService) {
      this.subscription = this.messageService.getMessage().subscribe((message:any) => { 
                this.selectedUsage = message.usage;
                this.example = message.input;
@@ -56,5 +59,9 @@ export class UsageComponent implements OnInit,OnDestroy {
 
   showOutput(){
     return this.sanitizer.bypassSecurityTrustHtml(this.output);
+  }
+  copyContent(){
+    this.clipboardService.copyFromContent(this.example);
+    this.notificationService.sendSuccessMessage("Copied","Copied code to clipboard!");
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {arrayMethodOptions} from '../../languages/defaultconfig'
-import {MessageService} from '../../services/message.service'
+import {MessagesService} from '../../services/message.service'
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -17,7 +17,7 @@ export class SelectedmethodComponent implements OnInit {
   options:any[] = [];
   keyName:string = ''
   
-  constructor(private msgService:MessageService,private translateService :TranslateService) { 
+  constructor(private msgService:MessagesService,private translateService :TranslateService) { 
     
   }
 

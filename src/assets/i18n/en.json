@@ -2,7 +2,8 @@
     "app":{
         "Title": "JavaScript Array Explorer(using Angular and Electron)",
         "Subtitle": "Find the array method you need without digging through the docs",
-        "Usage":"Usage"
+        "Usage":"Usage",
+        "Playground":"Try it out below"
     },
     "selectlanguage":{
         "Title":"Language"

@@ -5,6 +5,9 @@
       <ng-container *ngIf="selectedUsage">
           <teximate [text]="example" [effect]="effectOptions" [hover]="hoverOptions"></teximate>
       </ng-container>
+      <ng-container *ngIf="selectedUsage" #container>
+        <button (click)="copyContent()" class="ui-button-info">Copy code</button>
+      </ng-container>
     </p>
   </div>
   <div *ngIf="selectedUsage" class="usage2">
