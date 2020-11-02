@@ -3,7 +3,10 @@
         "Title": "مستكشف صفيف JavaScript (باستخدام Angular)",
         "Subtitle": "العثور على طريقة المصفوفة التي تحتاج إليها دون حفر من خلال الوثائق",
         "Usage":"استعمال",
-        "Playground":"جربه أدناه"
+        "Playground":"جربه أدناه",
+        "CodeCopy":"رمز النسخ",
+        "Notification":"نسخ",
+        "NotificationSummary":"كود نسخ إلى الحافظة!"
     },
     "selectlanguage":{
         "Title":"لغة"
