@@ -3,7 +3,10 @@
         "Title": "JavaScript Array Explorer(using Angular and Electron)",
         "Subtitle": "Find the array method you need without digging through the docs",
         "Usage":"Usage",
-        "Playground":"Try it out below"
+        "Playground":"Try it out below",
+        "CodeCopy":"Copy code",
+        "Notification":"Copied",
+        "NotificationSummary":"Copied code to clipboard!"
     },
     "selectlanguage":{
         "Title":"Language"

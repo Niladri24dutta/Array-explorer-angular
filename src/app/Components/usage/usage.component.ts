@@ -5,6 +5,7 @@ import { MessagesService } from '../../services/message.service';
 import { NotificationService } from '../../services/notification.service';
 import {TeximateOptions,TeximateHover,TeximateOrder} from "ng-teximate";
 import { ClipboardService } from 'ngx-clipboard';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-usage',
@@ -33,7 +34,7 @@ export class UsageComponent implements OnInit,OnDestroy {
   };
 
   constructor(private sanitizer:DomSanitizer,private messageService: MessagesService,private clipboardService: ClipboardService,
-             private notificationService:NotificationService) {
+             private notificationService:NotificationService,private translate: TranslateService) {
      this.subscription = this.messageService.getMessage().subscribe((message:any) => { 
                this.selectedUsage = message.usage;
                this.example = message.input;
@@ -62,6 +63,8 @@ export class UsageComponent implements OnInit,OnDestroy {
   }
   copyContent(){
     this.clipboardService.copyFromContent(this.example);
-    this.notificationService.sendSuccessMessage("Copied","Copied code to clipboard!");
+    let copyMessage = this.translate.instant("app.Notification");
+    let copyMessageSummary = this.translate.instant("app.NotificationSummary");
+    this.notificationService.sendSuccessMessage(copyMessage,copyMessageSummary);
   }
 }

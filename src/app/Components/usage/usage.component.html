@@ -6,7 +6,7 @@
           <teximate [text]="example" [effect]="effectOptions" [hover]="hoverOptions"></teximate>
       </ng-container>
       <ng-container *ngIf="selectedUsage" #container>
-        <button (click)="copyContent()" class="ui-button-info">Copy code</button>
+        <button (click)="copyContent()" class="ui-button-info">{{ 'app.CodeCopy' | translate }} </button>
       </ng-container>
     </p>
   </div>

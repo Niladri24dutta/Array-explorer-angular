@@ -12,7 +12,7 @@
     "e2e": "ng e2e",
     "electron": "ng build && electron .",
     "electron-aot": "ng build --prod --base-href=./ && electron .",
-    "electron-package-win": "ng build --prod --base-href=./ && electron-packager . ArrayExplorer --platform=win32  --arch=ia32  --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --out=release-builds --asar --win32metadata.ProductName=\"Javascript array explorer\" --app-version=\"1.0.0\" --build-version=\"1.0.0\" --app-copyright=\"Copyright © 2018 Niladri Sekhar Dutta.All rights reserved\"",
+    "electron-package-win": "ng build --prod --base-href=./ && electron-packager . ArrayExplorer --platform=win32  --arch=ia32  --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --out=release-builds --asar --win32metadata.ProductName=\"Javascript array explorer\" --app-version=\"1.0.0\" --build-version=\"1.0.0\" --app-copyright=\"Copyright © 2020 Niladri Sekhar Dutta.All rights reserved\"",
     "electron-package-mac": "ng build --prod --base-href=./ && electron-packager .  ArrayExplorer --platform=darwin --arch=x64  --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --overwrite --out=release-builds --asar",
     "electron-package-linux": "ng build --prod --base-href=./ && electron-packager . ArrayExplorer --overwrite  --platform=linux --arch=x64  --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --out=release-builds --asar"
   },
