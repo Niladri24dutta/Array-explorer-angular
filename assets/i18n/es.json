@@ -2,7 +2,11 @@
     "app":{
         "Title": "JavaScript Array Explorer (usando Angular)",
         "Subtitle": "Encuentre el método de matriz que necesita sin tener que buscar entre los documentos",
-        "Usage":"Uso"
+        "Usage":"Uso",
+        "Playground":"Pruébelo a continuación",
+        "CodeCopy":"Copiar codigo",
+        "Notification":"Copiado",
+        "NotificationSummary":"¡Código copiado al portapapeles!"
     },
     "selectlanguage":{
         "Title":"Idioma"

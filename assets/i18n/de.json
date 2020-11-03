@@ -2,7 +2,11 @@
     "app":{
         "Title": "JavaScript Array Explorer (unter Verwendung von Angular)",
         "Subtitle": "Finden Sie die benötigte Array-Methode, ohne die Dokumente durchsuchen zu müssen",
-        "Usage":"Verwendung"
+        "Usage":"Verwendung",
+        "Playground":"Probieren Sie es unten aus",
+        "CodeCopy":"Code kopieren",
+        "Notification":"Kopiert",
+        "NotificationSummary":"Code in Zwischenablage kopiert!"
     },
     "selectlanguage":{
         "Title":"Sprache"
